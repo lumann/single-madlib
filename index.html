@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body> 
+    <input type="file" name="inputfile"
+            id="inputfile"> 
+    <br> 
+   
+    <pre id="output"></pre> 
+      
+    <script type="text/javascript"> 
+      var fileString="";
+        document.getElementById('inputfile') .addEventListener('change', function() { 
+              
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+                document.getElementById('output') .textContent=fr.result;
+                fileString = fr.result; 
+                testFile();
+                main();
+            } 
+              
+            fr.readAsText(this.files[0]); 
+        }) 
+    </script>   
+    <script src="script.js"></script>
+    <script src="jquery.js"></script>
+  </body>
+</html>
