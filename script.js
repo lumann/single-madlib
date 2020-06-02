@@ -53,4 +53,5 @@ function displayResult() {
   newSentence = sentence.join(" ");
   alert("get the Author, then press OK or enter to see new sentence");
   alert(newSentence);
+  newSentence.readAsText
 }

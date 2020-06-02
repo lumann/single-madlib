@@ -11,7 +11,9 @@
             id="inputfile"> 
     <br> 
    
-    <pre id="output"></pre> 
+    <pre id="output"></pre>
+    <pre id="newSentence"></pre>
+    <pre id="oldSentence"></pre> 
       
     <script type="text/javascript"> 
       var fileString="";
@@ -19,9 +21,11 @@
               
             var fr=new FileReader(); 
             fr.onload=function(){ 
-                document.getElementById('output') .textContent=fr.result;
                 fileString = fr.result; 
                 main();
+                document.getElementById("oldSentence").innerHTML = oldSentence;
+                document.getElementById("newSentence").innerHTML = newSentence;
+
             } 
               
             fr.readAsText(this.files[0]); 
