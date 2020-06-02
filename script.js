@@ -1,6 +1,3 @@
-function testFile(){
-  alert(fileString);
-}
 var partsOfSpeach = ["noun","verb","adjective","adverb","prepositon", "proper-noun","interjection","plural-noun","plural-verb"];
 var oldSentence = null;
 var sentence = [];
@@ -45,7 +42,6 @@ function playerPopulate(){
   for (let i = 0; i < sentence.length; i++) {
     let newWord=("");
     let word = sentence[i];
-    alert(word);
     if(partsOfSpeach.includes(word)){
       newWord=prompt("Enter a " +word+ " and preserve puncuation!");
       sentence[i]=newWord;
